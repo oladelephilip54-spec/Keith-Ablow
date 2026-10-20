@@ -38,84 +38,11 @@
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px 80px;
     }
-    <!-- Pricing Title -->
-<div class="pricing-title">
-  <h2>Choose how we begin</h2>
-  <p>Three clear options</p>
-</div>
 
-<div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-
-  <!-- Book Trailer -->
-  <div class="card" style="animation-delay: 0.4s;">
-    <h3>Book Trailer</h3>
-    <p class="desc">A short cinematic trailer that captures the mood of the novel</p>
-    <div class="price">$80</div>
-    <div class="price-note">One-time payment • Delivered in 5–7 days</div>
-
-    <ul class="features">
-      <li>60–90 second cinematic trailer</li>
-      <li>Atmospheric tone matching the book</li>
-      <li>Ready for YouTube, Instagram, Facebook & website</li>
-      <li>2 rounds of revisions included</li>
-      <li>1080p + vertical versions</li>
-      <li>Music licensing handled</li>
-    </ul>
-
-    <a href="mailto:philip.oladele@philipoladele.com?subject=Book Trailer - A Matter of Life and Death" class="btn secondary">
-      Get Book Trailer
-    </a>
-  </div>
-
-  <!-- One Month -->
-  <div class="card" style="animation-delay: 0.5s;">
-    <h3>One Month</h3>
-    <p class="desc">A focused first slice of the work</p>
-    <div class="price">$1,500</div>
-    <div class="price-note">Higher monthly rate • Smaller scope</div>
-
-    <ul class="features">
-      <li>Improved book page (more engaging & conversion-focused)</li>
-      <li>4 posts per week on Facebook, Instagram & LinkedIn</li>
-      <li>First round of reviewer & podcast outreach</li>
-      <li>No TikTok in the first month</li>
-      <li>Content focused on quotes, psychology & reader reactions</li>
-    </ul>
-
-    <a href="mailto:philip.oladele@philipoladele.com?subject=One Month Plan - A Matter of Life and Death" class="btn secondary">
-      Start with One Month
-    </a>
-  </div>
-
-  <!-- Three Months -->
-  <div class="card featured" style="animation-delay: 0.6s;">
-    <div class="card-badge">RECOMMENDED</div>
-    <h3>Three Months</h3>
-    <p class="desc">Full scope + room to learn and improve</p>
-    <div class="price">$4,500</div>
-    <div class="price-note">$1,500 per month • Best value</div>
-
-    <ul class="features">
-      <li>Everything in the One Month plan</li>
-      <li>All four channels: Facebook, Instagram, LinkedIn & TikTok</li>
-      <li>Second and third outreach rounds</li>
-      <li>Monthly performance reports</li>
-      <li>Time to see what readers respond to and build on it</li>
-      <li>Clear view of what improved and where we can go next</li>
-    </ul>
-
-    <a href="mailto:philip.oladele@philipoladele.com?subject=Three Month Plan - A Matter of Life and Death" class="btn">
-      Start Three Month Plan
-    </a>
-  </div>
-
-</div>
-
-    /* ===== 3D BOOK SECTION ===== */
     .book-section {
       text-align: center;
       margin-bottom: 50px;
@@ -129,21 +56,17 @@
     }
 
     .book-3d {
-      width: 280px;
+      width: 260px;
       max-width: 80%;
       border-radius: 4px;
-      box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.5),
-        0 0 40px rgba(16, 185, 129, 0.15);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.15);
       transition: all 0.5s ease;
       animation: floatBook 6s ease-in-out infinite;
     }
 
     .book-3d:hover {
       transform: scale(1.04) rotateY(-6deg);
-      box-shadow: 
-        0 35px 60px rgba(0, 0, 0, 0.6),
-        0 0 60px rgba(16, 185, 129, 0.25);
+      box-shadow: 0 35px 60px rgba(0, 0, 0, 0.6), 0 0 60px rgba(16, 185, 129, 0.25);
     }
 
     @keyframes floatBook {
@@ -173,7 +96,6 @@
       border-radius: 50px;
       border: 1px solid rgba(16, 185, 129, 0.3);
       margin-bottom: 18px;
-      letter-spacing: 0.5px;
     }
 
     h1 {
@@ -183,7 +105,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 10px;
-      line-height: 1.2;
     }
 
     .subtitle {
@@ -193,7 +114,6 @@
       margin: 0 auto;
     }
 
-    /* Letter */
     .letter {
       background: rgba(15, 23, 20, 0.7);
       border: 1px solid rgba(16, 185, 129, 0.15);
@@ -201,7 +121,6 @@
       padding: 40px;
       margin-bottom: 60px;
       backdrop-filter: blur(10px);
-      box-shadow: 0 0 40px rgba(16, 185, 129, 0.05);
       animation: fadeUp 0.8s ease 0.25s both;
     }
 
@@ -215,7 +134,66 @@
       color: #6ee7b7;
     }
 
-    /* 
+    .pricing-title {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeUp 0.8s ease 0.35s both;
+    }
+
+    .pricing-title h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .pricing-title p {
+      color: #94a3b8;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: rgba(15, 23, 20, 0.8);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.4s; }
+    .card:nth-child(2) { animation-delay: 0.5s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(16, 185, 129, 0.5);
+      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.12);
+    }
+
+    .card.featured {
+      border-color: #10b981;
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+      animation: fadeUp 0.8s ease 0.6s both, pulseGlow 3s ease-in-out infinite 1.8s;
+    }
+
+    .card.featured::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #10b981, #34d399);
+    }
+
     .card-badge {
       position: absolute;
       top: 20px;
@@ -241,7 +219,7 @@
     }
 
     .price {
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: #6ee7b7;
       margin-bottom: 4px;
@@ -309,17 +287,79 @@
       border: 1px solid rgba(16, 185, 129, 0.2);
       border-radius: 16px;
       padding: 28px;
+      margin-bottom: 50px;
+      animation: fadeUp 0.8s ease 0.75s both;
+    }
 
+    .note h3 {
+      color: #6ee7b7;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
 
-    <!-- 3D BOOK -->
+    .note p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(16, 185, 129, 0.15);
+      animation: fadeUp 0.8s ease 0.85s both;
+    }
+
+    footer p {
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: #34d399;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .name {
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.15); }
+      50% { box-shadow: 0 0 45px rgba(16, 185, 129, 0.25); }
+    }
+
+    @media (max-width: 600px) {
+      .letter { padding: 28px 20px; }
+      .card { padding: 24px; }
+      .book-3d { width: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <div class="container">
+
     <div class="book-section">
       <div class="book-wrapper">
-        <img 
-          src="book-3d.jpg" 
-          alt="A Matter of Life and Death - 3D Book Cover" 
-          class="book-3d"
-          id="bookImage"
-        >
+        <img src="book-3d.jpg" alt="A Matter of Life and Death" class="book-3d">
         <div class="book-glow"></div>
       </div>
 
@@ -328,90 +368,109 @@
       <p class="subtitle">A focused plan to put the book in front of more of the right readers</p>
     </div>
 
-    <!-- Letter -->
     <div class="letter">
       <p>Hi Keith, thanks again for taking the time to speak with me earlier.</p>
 
-      <p>I’ve been thinking about how we can get <strong>A Matter of Life and Death</strong> in front of more readers, and I’d love to help you make that happen.</p>
+      <p>I have been thinking about how we can get <strong>A Matter of Life and Death</strong> in front of more readers, and I would love to help you make that happen.</p>
 
-      <p>For the first three months, I’d like to focus on three things. First, making the book page more engaging and giving visitors a stronger reason to pick up the book. Second, creating four posts a week across Facebook, Instagram, LinkedIn and TikTok, using interesting quotes, the psychology behind the story, reader reactions and some behind the scenes content around <strong>The Hidden Script</strong>. Third, reaching out to book reviewers, bookstagram accounts and podcasters who already connect with readers interested in psychological thrillers.</p>
+      <p>For the first three months, I would like to focus on three things. First, making the book page more engaging and giving visitors a stronger reason to pick up the book. Second, creating four posts a week across Facebook, Instagram, LinkedIn and TikTok, using interesting quotes, the psychology behind the story, reader reactions and some behind the scenes content. Third, reaching out to book reviewers, bookstagram accounts and podcasters who already connect with readers interested in psychological thrillers.</p>
 
-      <p>Here’s how we could get started.</p>
+      <p>Here is how we could get started.</p>
 
-      <p>We could try <strong>one month at $1,500</strong>, or work together for <strong>three months at $4,500</strong>, which brings it down to $1,500 per month.</p>
+      <p>We could try <strong>one month at $1500</strong>, or work together for <strong>three months at $4500</strong>, which brings it down to $1500 per month.</p>
 
-      <p>Personally, I’d prefer we give it three months. I don’t want us to just put content out there and hope for the best. I want enough time to see what readers respond to, learn from the results and build on what works.</p>
+      <p>Personally, I would prefer we give it three months. I do not want us to just put content out there and hope for the best. I want enough time to see what readers respond to, learn from the results and build on what works.</p>
 
-      <p>Within the first two weeks, I’d aim to have the improved book page ready. We’d start posting in the first week, and I’d begin the first round of reviewer and podcast outreach within the first month.</p>
+      <p>Within the first two weeks, I would aim to have the improved book page ready. We would start posting in the first week, and I would begin the first round of reviewer and podcast outreach within the first month.</p>
 
-      <p>Any advertising budget would be separate, and nothing would be spent without your approval. I’d just need your feedback on the content within three working days so we can keep everything moving.</p>
+      <p>Any advertising budget would be separate, and nothing would be spent without your approval. I would just need your feedback on the content within three working days so we can keep everything moving.</p>
 
-      <p>My goal is to make this worthwhile for you, not simply to keep your pages active. I want us to be able to look back at the end of the three months and see what we’ve built, what has improved and where we can go next.</p>
+      <p>My goal is to make this worthwhile for you, not simply to keep your pages active. I want us to be able to look back at the end of the three months and see what we have built, what has improved and where we can go next.</p>
 
       <p>If the three month plan sounds good to you, I can send over a simple agreement and we can get started next Monday.</p>
     </div>
 
-    <!-- Pricing -->
     <div class="pricing-title">
       <h2>Choose how we begin</h2>
-      <p>Two clear options with different scope, and different pace</p>
+      <p>Three clear options</p>
     </div>
 
     <div class="pricing-grid">
-      <!-- 1 Month -->
+
+      <!-- Book Trailer -->
+      <div class="card">
+        <h3>Book Trailer</h3>
+        <p class="desc">A short cinematic trailer that captures the mood of the novel</p>
+        <div class="price">$80</div>
+        <div class="price-note">One time payment • Delivered in 5 to 7 days</div>
+
+        <ul class="features">
+          <li>60 to 90 second cinematic trailer</li>
+          <li>Atmospheric tone matching the book</li>
+          <li>Ready for YouTube, Instagram, Facebook and website</li>
+          <li>2 rounds of revisions included</li>
+          <li>1080p plus vertical versions</li>
+          <li>Music licensing handled</li>
+        </ul>
+
+        <a href="mailto:philip.oladele@philipoladele.com?subject=Book Trailer A Matter of Life and Death" class="btn secondary">
+          Get Book Trailer
+        </a>
+      </div>
+
+      <!-- One Month -->
       <div class="card">
         <h3>One Month</h3>
         <p class="desc">A focused first slice of the work</p>
-        <div class="price">$1,500</div>
+        <div class="price">$1500</div>
         <div class="price-note">Higher monthly rate • Smaller scope</div>
 
         <ul class="features">
-          <li>Improved book page (more engaging & conversion focused)</li>
-          <li>4 posts per week on Instagram & Facebook only</li>
-          <li>First round of reviewer & podcast outreach</li>
+          <li>Improved book page</li>
+          <li>4 posts per week on Facebook, Instagram and LinkedIn</li>
+          <li>First round of reviewer and podcast outreach</li>
           <li>No TikTok in the first month</li>
-          <li>Content focused on quotes, psychology & reader reactions</li>
+          <li>Content focused on quotes, psychology and reader reactions</li>
         </ul>
 
-        <a href="mailto:philip.oladele@philipoladele.com?subject=One Month Plan - A Matter of Life and Death" class="btn secondary">
+        <a href="mailto:philip.oladele@philipoladele.com?subject=One Month Plan A Matter of Life and Death" class="btn secondary">
           Start with One Month
         </a>
       </div>
 
-      <!-- 3 Months -->
+      <!-- Three Months -->
       <div class="card featured">
         <div class="card-badge">RECOMMENDED</div>
         <h3>Three Months</h3>
-        <p class="desc">Full scope + room to learn and improve</p>
-        <div class="price">$4,500</div>
-        <div class="price-note">$1,500 per month • Best value</div>
+        <p class="desc">Full scope plus room to learn and improve</p>
+        <div class="price">$4500</div>
+        <div class="price-note">$1500 per month • Best value</div>
 
         <ul class="features">
           <li>Everything in the One Month plan</li>
-          <li>All four channels: Facebook, Instagram, LinkedIn & TikTok</li>
+          <li>All four channels: Facebook, Instagram, LinkedIn and TikTok</li>
           <li>Second and third outreach rounds</li>
           <li>Monthly performance reports</li>
           <li>Time to see what readers respond to and build on it</li>
           <li>Clear view of what improved and where we can go next</li>
         </ul>
 
-        <a href="mailto:philip.oladele@philipoladele.com?subject=Three Month Plan - A Matter of Life and Death" class="btn">
+        <a href="mailto:philip.oladele@philipoladele.com?subject=Three Month Plan A Matter of Life and Death" class="btn">
           Start Three Month Plan
         </a>
       </div>
+
     </div>
 
-    <!-- Note -->
     <div class="note">
       <h3>Why the difference exists</h3>
       <p>
-        The one-month option is deliberately smaller. It covers the book page, four posts a week on the two channels that matter most for thrillers (Instagram and Facebook), and the first outreach round. TikTok is not included because one month is not long enough to make it worthwhile.
+        The one month option is deliberately smaller. It covers the book page, four posts a week on Facebook, Instagram and LinkedIn, and the first outreach round. TikTok is not included because one month is not long enough to make it worthwhile.
         <br><br>
-        Three months gets all four channels, a second and third outreach round, plus a monthly report showing what’s landing. The reports are what make renewing easy to decide. The difference is not just length ,it’s scope.
+        Three months gets all four channels, a second and third outreach round, plus a monthly report showing what is landing. The reports are what make renewing easy to decide. The difference is not just length, it is scope.
       </p>
     </div>
 
-    <!-- Footer -->
     <footer>
       <p class="name">Philip Oladele</p>
       <p>
@@ -422,11 +481,7 @@
         Looking forward to hearing from you.
       </p>
     </footer>
-  </div>
 
-  <script>
-    // Simple way to make sure the image loads (you will replace the src)
-    // After you upload the 3D image to your GitHub repo, change the src below
-  </script>
+  </div>
 </body>
 </html>
