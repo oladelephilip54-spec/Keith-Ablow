@@ -42,6 +42,78 @@
       margin: 0 auto;
       padding: 40px 20px 80px;
     }
+    <!-- Pricing Title -->
+<div class="pricing-title">
+  <h2>Choose how we begin</h2>
+  <p>Three clear options</p>
+</div>
+
+<div class="pricing-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+  <!-- Book Trailer -->
+  <div class="card" style="animation-delay: 0.4s;">
+    <h3>Book Trailer</h3>
+    <p class="desc">A short cinematic trailer that captures the mood of the novel</p>
+    <div class="price">$80</div>
+    <div class="price-note">One-time payment • Delivered in 5–7 days</div>
+
+    <ul class="features">
+      <li>60–90 second cinematic trailer</li>
+      <li>Atmospheric tone matching the book</li>
+      <li>Ready for YouTube, Instagram, Facebook & website</li>
+      <li>2 rounds of revisions included</li>
+      <li>1080p + vertical versions</li>
+      <li>Music licensing handled</li>
+    </ul>
+
+    <a href="mailto:philip.oladele@philipoladele.com?subject=Book Trailer - A Matter of Life and Death" class="btn secondary">
+      Get Book Trailer
+    </a>
+  </div>
+
+  <!-- One Month -->
+  <div class="card" style="animation-delay: 0.5s;">
+    <h3>One Month</h3>
+    <p class="desc">A focused first slice of the work</p>
+    <div class="price">$1,500</div>
+    <div class="price-note">Higher monthly rate • Smaller scope</div>
+
+    <ul class="features">
+      <li>Improved book page (more engaging & conversion-focused)</li>
+      <li>4 posts per week on Facebook, Instagram & LinkedIn</li>
+      <li>First round of reviewer & podcast outreach</li>
+      <li>No TikTok in the first month</li>
+      <li>Content focused on quotes, psychology & reader reactions</li>
+    </ul>
+
+    <a href="mailto:philip.oladele@philipoladele.com?subject=One Month Plan - A Matter of Life and Death" class="btn secondary">
+      Start with One Month
+    </a>
+  </div>
+
+  <!-- Three Months -->
+  <div class="card featured" style="animation-delay: 0.6s;">
+    <div class="card-badge">RECOMMENDED</div>
+    <h3>Three Months</h3>
+    <p class="desc">Full scope + room to learn and improve</p>
+    <div class="price">$4,500</div>
+    <div class="price-note">$1,500 per month • Best value</div>
+
+    <ul class="features">
+      <li>Everything in the One Month plan</li>
+      <li>All four channels: Facebook, Instagram, LinkedIn & TikTok</li>
+      <li>Second and third outreach rounds</li>
+      <li>Monthly performance reports</li>
+      <li>Time to see what readers respond to and build on it</li>
+      <li>Clear view of what improved and where we can go next</li>
+    </ul>
+
+    <a href="mailto:philip.oladele@philipoladele.com?subject=Three Month Plan - A Matter of Life and Death" class="btn">
+      Start Three Month Plan
+    </a>
+  </div>
+
+</div>
 
     /* ===== 3D BOOK SECTION ===== */
     .book-section {
@@ -143,66 +215,7 @@
       color: #6ee7b7;
     }
 
-    /* Pricing */
-    .pricing-title {
-      text-align: center;
-      margin-bottom: 40px;
-      animation: fadeUp 0.8s ease 0.35s both;
-    }
-
-    .pricing-title h2 {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-
-    .pricing-title p {
-      color: #94a3b8;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-      margin-bottom: 60px;
-    }
-
-    .card {
-      background: rgba(15, 23, 20, 0.8);
-      border: 1px solid rgba(16, 185, 129, 0.2);
-      border-radius: 20px;
-      padding: 32px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      animation: fadeUp 0.8s ease both;
-    }
-
-    .card:nth-child(1) { animation-delay: 0.45s; }
-    .card:nth-child(2) { animation-delay: 0.6s; }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(16, 185, 129, 0.5);
-      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.12);
-    }
-
-    .card.featured {
-      border-color: #10b981;
-      box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
-      animation: fadeUp 0.8s ease 0.6s both, pulseGlow 3s ease-in-out infinite 1.8s;
-    }
-
-    .card.featured::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #10b981, #34d399);
-    }
-
+    /* 
     .card-badge {
       position: absolute;
       top: 20px;
@@ -296,75 +309,7 @@
       border: 1px solid rgba(16, 185, 129, 0.2);
       border-radius: 16px;
       padding: 28px;
-      margin-bottom: 50px;
-      animation: fadeUp 0.8s ease 0.75s both;
-    }
 
-    .note h3 {
-      color: #6ee7b7;
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-    }
-
-    .note p {
-      color: #94a3b8;
-      font-size: 0.95rem;
-    }
-
-    footer {
-      text-align: center;
-      padding-top: 40px;
-      border-top: 1px solid rgba(16, 185, 129, 0.15);
-      animation: fadeUp 0.8s ease 0.85s both;
-    }
-
-    footer p {
-      color: #64748b;
-      margin-bottom: 8px;
-    }
-
-    footer a {
-      color: #34d399;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .name {
-      color: #e2e8f0;
-      font-weight: 600;
-      font-size: 1.1rem;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.15); }
-      50% { box-shadow: 0 0 45px rgba(16, 185, 129, 0.25); }
-    }
-
-    @media (max-width: 600px) {
-      .letter { padding: 28px 20px; }
-      .card { padding: 24px; }
-      .book-3d { width: 220px; }
-    }
-  </style>
-</head>
-<body>
-  <div class="bg-glow"></div>
-
-  <div class="container">
 
     <!-- 3D BOOK -->
     <div class="book-section">
