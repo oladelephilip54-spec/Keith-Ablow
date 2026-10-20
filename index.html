@@ -20,7 +20,6 @@
       overflow-x: hidden;
     }
 
-    /* Animated background glow */
     .bg-glow {
       position: fixed;
       top: -50%;
@@ -44,11 +43,52 @@
       padding: 40px 20px 80px;
     }
 
-    /* Header */
-    header {
+    /* ===== 3D BOOK SECTION ===== */
+    .book-section {
       text-align: center;
-      margin-bottom: 60px;
-      animation: fadeUp 0.8s ease forwards;
+      margin-bottom: 50px;
+      animation: fadeUp 0.9s ease forwards;
+    }
+
+    .book-wrapper {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .book-3d {
+      width: 280px;
+      max-width: 80%;
+      border-radius: 4px;
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(16, 185, 129, 0.15);
+      transition: all 0.5s ease;
+      animation: floatBook 6s ease-in-out infinite;
+    }
+
+    .book-3d:hover {
+      transform: scale(1.04) rotateY(-6deg);
+      box-shadow: 
+        0 35px 60px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(16, 185, 129, 0.25);
+    }
+
+    @keyframes floatBook {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .book-glow {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 40px;
+      background: radial-gradient(ellipse, rgba(16, 185, 129, 0.35), transparent 70%);
+      filter: blur(10px);
+      z-index: -1;
     }
 
     .badge {
@@ -60,28 +100,28 @@
       padding: 6px 16px;
       border-radius: 50px;
       border: 1px solid rgba(16, 185, 129, 0.3);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       letter-spacing: 0.5px;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
       font-weight: 700;
       background: linear-gradient(135deg, #ffffff 0%, #6ee7b7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       line-height: 1.2;
     }
 
     .subtitle {
       color: #94a3b8;
-      font-size: 1.1rem;
-      max-width: 560px;
+      font-size: 1.05rem;
+      max-width: 520px;
       margin: 0 auto;
     }
 
-    /* Letter Section */
+    /* Letter */
     .letter {
       background: rgba(15, 23, 20, 0.7);
       border: 1px solid rgba(16, 185, 129, 0.15);
@@ -90,7 +130,7 @@
       margin-bottom: 60px;
       backdrop-filter: blur(10px);
       box-shadow: 0 0 40px rgba(16, 185, 129, 0.05);
-      animation: fadeUp 0.8s ease 0.2s both;
+      animation: fadeUp 0.8s ease 0.25s both;
     }
 
     .letter p {
@@ -103,11 +143,11 @@
       color: #6ee7b7;
     }
 
-    /* Pricing Section */
+    /* Pricing */
     .pricing-title {
       text-align: center;
       margin-bottom: 40px;
-      animation: fadeUp 0.8s ease 0.3s both;
+      animation: fadeUp 0.8s ease 0.35s both;
     }
 
     .pricing-title h2 {
@@ -138,8 +178,8 @@
       animation: fadeUp 0.8s ease both;
     }
 
-    .card:nth-child(1) { animation-delay: 0.4s; }
-    .card:nth-child(2) { animation-delay: 0.55s; }
+    .card:nth-child(1) { animation-delay: 0.45s; }
+    .card:nth-child(2) { animation-delay: 0.6s; }
 
     .card:hover {
       transform: translateY(-8px);
@@ -150,6 +190,7 @@
     .card.featured {
       border-color: #10b981;
       box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+      animation: fadeUp 0.8s ease 0.6s both, pulseGlow 3s ease-in-out infinite 1.8s;
     }
 
     .card.featured::before {
@@ -250,14 +291,13 @@
       background: rgba(16, 185, 129, 0.1);
     }
 
-    /* Note box */
     .note {
       background: rgba(16, 185, 129, 0.08);
       border: 1px solid rgba(16, 185, 129, 0.2);
       border-radius: 16px;
       padding: 28px;
       margin-bottom: 50px;
-      animation: fadeUp 0.8s ease 0.7s both;
+      animation: fadeUp 0.8s ease 0.75s both;
     }
 
     .note h3 {
@@ -271,12 +311,11 @@
       font-size: 0.95rem;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding-top: 40px;
       border-top: 1px solid rgba(16, 185, 129, 0.15);
-      animation: fadeUp 0.8s ease 0.8s both;
+      animation: fadeUp 0.8s ease 0.85s both;
     }
 
     footer p {
@@ -299,7 +338,6 @@
       font-size: 1.1rem;
     }
 
-    /* Animations */
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -311,11 +349,6 @@
       }
     }
 
-    /* Glow pulse on featured card */
-    .card.featured {
-      animation: fadeUp 0.8s ease 0.55s both, pulseGlow 3s ease-in-out infinite 1.5s;
-    }
-
     @keyframes pulseGlow {
       0%, 100% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.15); }
       50% { box-shadow: 0 0 45px rgba(16, 185, 129, 0.25); }
@@ -324,6 +357,7 @@
     @media (max-width: 600px) {
       .letter { padding: 28px 20px; }
       .card { padding: 24px; }
+      .book-3d { width: 220px; }
     }
   </style>
 </head>
@@ -331,12 +365,23 @@
   <div class="bg-glow"></div>
 
   <div class="container">
-    <!-- Header -->
-    <header>
+
+    <!-- 3D BOOK -->
+    <div class="book-section">
+      <div class="book-wrapper">
+        <img 
+          src="book-3d.jpg" 
+          alt="A Matter of Life and Death - 3D Book Cover" 
+          class="book-3d"
+          id="bookImage"
+        >
+        <div class="book-glow"></div>
+      </div>
+
       <div class="badge">PERSONAL PROPOSAL</div>
       <h1>A Matter of Life and Death</h1>
       <p class="subtitle">A focused plan to put the book in front of more of the right readers</p>
-    </header>
+    </div>
 
     <!-- Letter -->
     <div class="letter">
@@ -411,7 +456,7 @@
       </div>
     </div>
 
-    <!-- Important Note -->
+    <!-- Note -->
     <div class="note">
       <h3>Why the difference exists</h3>
       <p>
@@ -433,5 +478,10 @@
       </p>
     </footer>
   </div>
+
+  <script>
+    // Simple way to make sure the image loads (you will replace the src)
+    // After you upload the 3D image to your GitHub repo, change the src below
+  </script>
 </body>
 </html>
